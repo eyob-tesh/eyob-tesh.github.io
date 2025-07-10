@@ -5,8 +5,19 @@
     font-family: sans-serif;
 }
 
+:root {
+  --clr-deep-forest: #1B3322;
+  --clr-moss:        #3A5A40;
+  --clr-sage:        #A3B18A;
+  --clr-sand:        #F8F4F0;
+  --clr-clay:        #D36135;
+  --clr-accent:      #5E8E7D;
+  --clr-goldOak:     #C19A6B;
+  --clr-mutedCopper: #B66D37;    
+}
+
 .navbar {
-    background: #131313;
+    background: var(--clr-deep-forest);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -29,8 +40,8 @@
 }
 
 #navbar__logo {
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-color: var(--clr-sage);
+    background-image: linear-gradient(to bottom, var(--clr-sage) 0%, var(--clr-moss) 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -59,7 +70,7 @@
 }
 
 .navbar__links {
-    color: #fff;
+    color: var(--clr-sand);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,18 +98,18 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #f77062;
+    background: var(--clr-accent);
     color: #fff;
 }
 
 .button:hover {
-    background: #4837ff;
+    background: var(--clr-mutedCopper);
     transition: all of 0.3s ease;
 }
 
 /* This one is for home tech and products*/
 .navbar__links:hover {
-    color: #f77062;
+    color: var(--clr-goldOak);
     transition: all 0.3s ease;
 }
 
@@ -185,15 +196,21 @@
         cursor: pointer;
     }
 
-    #mobile-menu.is-active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
     #mobile-menu.is-active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
     }
 
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+}
+
+/* Page background */
+body {
+    background: #f8f4f0;
+    color: #1B3322;
 }
