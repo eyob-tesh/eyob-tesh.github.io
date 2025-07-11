@@ -6,12 +6,17 @@
 }
 
 :root {
-  --clr-deep-forest: #1B3322;
+  --clr-deep-forest: #2D4A32;
+  --clr-sage:        #8FBC8F;
+  --clr-gold:        #D4AF37;
+  --clr-cream:       #F5F5DC;
+  --clr-tan:         #D2B48C;
+  --clr-charcoal:    #36454F;
+  --clr-accent:      #8FBC8F;
+  --clr-hover:       #CFB53B;
   --clr-moss:        #3A5A40;
-  --clr-sage:        #A3B18A;
   --clr-sand:        #F8F4F0;
   --clr-clay:        #D36135;
-  --clr-accent:      #5E8E7D;
   --clr-goldOak:     #C19A6B;
   --clr-mutedCopper: #B66D37;    
 }
@@ -211,14 +216,14 @@
 
 /* Page background */
 body {
-    background: #f8f4f0;
-    color: #1B3322;
+    background: var(--clr-cream);
+    color: var(--clr-charcoal);
 }
 
 /* Hero Section CSS */
 
 .main {
-    background-color: #141414;
+    background-color: var(--clr-deep-forest);
 }
 
 .main__container {
@@ -228,7 +233,7 @@ body {
     justify-self: center;
     margin: 0 auto;
     height: 90vh;
-    background-color: #141414;
+    background-color: var(--clr-accent);
     z-index: 1;
     width: 100%;
     max-width: 1300px;
@@ -238,7 +243,7 @@ body {
 .main__content h1 {
     font-size: 4rem;
     background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb1ff 100%);
+    background-image: linear-gradient(to top, var(--clr-cream) 0%, #ffb1ff 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -371,7 +376,7 @@ body {
 /* Services Section CSS */
 
 .services {
-    background: #141414;
+    background: var(--clr-tan);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -379,8 +384,8 @@ body {
 }
 
 .services h1 {
-    background-color: #ff8177;
-    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    background-color: var(--clr-tan);
+    background-image: linear-gradient(to right, var(--clr-cream) 0%, var(--clr-deep-forest) 100%);
     background-size: 100%;
     margin-bottom: 5rem;
     font-size: 2.5rem;
@@ -414,7 +419,7 @@ body {
 .services__card:nth-child(2) {
     background-image: linear-gradient(
         to bottom,
-        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,0) 0%,
         rgba(17,17,17,0.6) 100%), 
         url('images/gradPic1.JPEG');
 }
