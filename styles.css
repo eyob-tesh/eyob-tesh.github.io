@@ -19,6 +19,7 @@
   --clr-clay:        #D36135;
   --clr-goldOak:     #C19A6B;
   --clr-mutedCopper: #B66D37;    
+  --clr-highlight:   #DE05FF;
 }
 
 .navbar {
@@ -216,8 +217,9 @@
 
 /* Page background */
 body {
-    background: var(--clr-sage);
+    background: var(--clr-deep-forest);
     color: var(--clr-charcoal);
+    min-height: 100vh;
 }
 
 /* Hero Section CSS */
@@ -488,6 +490,29 @@ body {
     text-align: center;
     width: 100%;
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    /* Animation Portion */
+    transform: scale(0.8);
+    opacity: 0.3;
+    transition: transform 0.8s ease-out, opasity 0.8s ease out;
+}
+
+.footer__container.in-view {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.footer__content {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.6s ease-out 0.3s, opacity 0.6s ease-out 0.3s;
+}
+
+.footer__container.in-view .footer__content {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .footer__topHeading {
