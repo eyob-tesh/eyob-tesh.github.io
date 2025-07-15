@@ -479,7 +479,7 @@ body {
 
 /* Footer Section CSS*/
 .footer__container {
-    background-color: var(--clr-sand);
+    background-color: var(--clr-deep-forest);
     padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
@@ -491,7 +491,7 @@ body {
 }
 
 .footer__topHeading {
-    color: var(--clr-charcoal);
+    color: var(--clr-goldOak);
     margin-bottom: 2rem;
 }
 
@@ -506,7 +506,7 @@ body {
 .contact__info {
     margin-bottom: 4rem;
     font-size: 1.5rem;
-    color: var(--clr-charcoal);
+    color: var(--clr-goldOak);
     font-weight: 400;
 }
 
@@ -520,7 +520,7 @@ body {
 
 .contact_details {
     margin-bottom: 4rem;
-    color: var(--clr-charcoal);
+    color: var(--clr-goldOak);
 }
 
 .contact__label {
@@ -548,7 +548,7 @@ body {
 }
 
 .social__icon--link {
-    color: var(--clr-moss);
+    color: var(--clr-goldOak);
     font-size: 2rem;
     text-decoration: none;
     transition: color 0.3s ease;
