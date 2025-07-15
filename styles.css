@@ -476,24 +476,22 @@ body {
         width: 300px;
     }
 }
-
 /* Footer Section CSS*/
-.footer2__container {
+.footer__container {
     background-color: var(--clr-sand);
     padding: 4rem 2rem;
-    text-align: center;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
-    max-width: 1800px;
+    min-height: 100vh;
 }
 
 .footer__topHeading {
-    color: var(--clr-charcoal)
+    color: var(--clr-charcoal);
+    margin-bottom: 2rem;
 }
 
 .footer__topHeading h1 {
@@ -509,26 +507,23 @@ body {
     font-size: 1.5rem;
     color: var(--clr-charcoal);
     font-weight: 400;
-
 }
 
 .contact__title {
     margin-bottom: 0.5rem;
 }
 
-
 .contact__location {
     opacity: 0.8;
 }
 
-
-.contact__details {
+.contact_details {
     margin-bottom: 4rem;
     color: var(--clr-charcoal);
 }
 
 .contact__label {
-    font-size: 1.2 rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     opacity: 0.8;
 }
@@ -546,148 +541,62 @@ body {
 
 .social__media {
     margin-top: 2rem;
-    max-width: 1000px;
-    width: 100%;
-}
-
-social__media a:hover {
-    color: var(--clr-clay);
-    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .social__icon--link {
     color: var(--clr-moss);
-    font-size: 24px;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
 }
 
-.social__icons {
+.social__icon--link:hover {
     color: var(--clr-clay);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    transition: color 0.3s ease;
+}
+
+/* Mobile responsiveness for footer */
+@media screen and (max-width: 768px) {
+    .footer__topHeading h1 {
+        font-size: 3rem;
+    }
     
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 240px;
-} 
-
-#footer__logo {
-    color: var(--clr-moss);
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-}
-
-.footer__link--items {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 16px;
-    width: 160px;
-    box-sizing: border-box;
-}
-
-.footer__link--items h2 {
-    margin-bottom: 16px;
-}
-
-.footer__link--items > h2 {
-    color: var(--clr-cream);
-}
-
-.footer__link--items a {
-    color: var(--clr-cream);
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-}
-
-/* when hovering anything in footer section */
-.footer__link--items a:hover {
-    color: var(--clr-hover);
-    transition: 0.3s ease-out;
-}
-
-/* Social Icons */
-.social__icon--link {
-    color: var(--clr-moss);
-    font-size: 24px;
-}
-
-.social__media {
-    max-width: 1000px;
-    width: 100%;
-}
-
-.social__media--wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1000px;
-    margin: 40px auto 0 auto;
-}
-
-.social__icons {
-    color: var(--clr-charcoal);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    transition: color 0.3s ease;
+    .contact__info {
+        font-size: 1.2rem;
+    }
     
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 240px;
-}
-
-.social__logo {
-    color: #fff;
-    justify-self: flex-start;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.website__rights {
-    color: var(--clr-moss);
-}
-
-@media screen and (max-width: 820px) {
-    .footer__links {
-        padding-top: 2rem;
+    .contact__email,
+    .contact__phone {
+        font-size: 1.5rem;
     }
-
-    #footer__logo {
-        margin-bottom: 2rem;;
+    
+    .social__media {
+        gap: 1.5rem;
     }
-
-    .website__rights {
-        margin-bottom: 2rem;
-    }
-
-    .footer__link--wrapper {
-        flex-direction: column;
-    }
-
-    .social__media--wrap {
-        flex-direction: column;
+    
+    .social__icon--link {
+        font-size: 1.5rem;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .footer__link--items {
-        margin: 0;
-        padding: 10px;
-        width: 100%;
+    .footer__topHeading h1 {
+        font-size: 2.5rem;
     }
-} 
+    
+    .contact__info {
+        font-size: 1rem;
+    }
+    
+    .contact__email,
+    .contact__phone {
+        font-size: 1.2rem;
+    }
+    
+    .social__icon--link {
+        font-size: 1.2rem;
+    }
+}
