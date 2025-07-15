@@ -46,6 +46,7 @@
 }
 
 #navbar__logo {
+    background: none;
     background-color: var(--clr-sage);
     background-image: linear-gradient(to bottom, var(--clr-sage) 0%, var(--clr-moss) 100%);
     background-size: 100%;
@@ -58,6 +59,12 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
+}
+
+#logo__img {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
 }
 
 .fa-gem {
@@ -76,7 +83,7 @@
 }
 
 .navbar__links {
-    color: var(--clr-sand);
+    color: var(--clr-goldOak);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,9 +110,9 @@
     width: 100%;
     border: none;
     outline: none;
-    border-radius: 4px;
+    border-radius: 15px;
     background: var(--clr-accent);
-    color: #fff;
+    color: var(--clr-cream);
 }
 
 .button:hover {
