@@ -390,6 +390,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    width: 100%;
 }
 
 .services h1 {
@@ -402,6 +403,7 @@ body {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    padding-top: 2rem;
 }
 
 .services__container {
@@ -410,9 +412,10 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 2rem;
+    border-radius: 8px;
 }
 
 .services__card {
