@@ -382,15 +382,35 @@ body {
     }
 }
 
-/* Services Section CSS */
+/* Body of my main page */
+.body {
+    color: var(--clr-goldOak);
+    background-image: linear-gradient(to right, var(--clr-cream) 0%, var(--clr-deep-forest) 100%);
 
-.services {
-    background: var(--clr-deep-forest);
+}
+
+/* The main skills section / second Service section */
+.body__services {
+    background: var(--clr-hover);
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    width: 100%;
+}
+
+.body__services h2 {
+    background-color: var(--clr-tan);
+    background-image: ;
+}
+
+
+/* Services Section CSS */
+.services {
+    background: var(--clr-moss);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
 .services h1 {
@@ -403,19 +423,12 @@ body {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    padding-top: 2rem;
 }
 
 .services__container {
-    background-color: var(--clr-accent);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 8px;
 }
 
 .services__card {
@@ -640,4 +653,29 @@ body {
     .social__icon--link {
         font-size: 1.2rem;
     }
+}
+
+/* Skills Section Cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.skill-card {
+  background: var(--clr-sand);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+.skill-card i {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--clr-deep-forest);
+}
+.skill-card p {
+  font-size: 1rem;
+  color: var(--clr-charcoal);
+  font-weight: 600;
 }
