@@ -382,28 +382,6 @@ body {
     }
 }
 
-/* Body of my main page */
-.body {
-    color: var(--clr-goldOak);
-    background-image: linear-gradient(to right, var(--clr-cream) 0%, var(--clr-deep-forest) 100%);
-
-}
-
-/* The main skills section / second Service section */
-.body__services {
-    background: var(--clr-hover);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-}
-
-.body__services h2 {
-    background-color: var(--clr-tan);
-    background-image: ;
-}
-
-
 /* Services Section CSS */
 .services {
     background: var(--clr-moss);
@@ -658,24 +636,60 @@ body {
 /* Skills Section Cards */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
   gap: 1rem;
-  margin: 2rem 0;
+  padding: 2rem;
+  justify-content: center;
 }
+
 .skill-card {
   background: var(--clr-sand);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   text-align: center;
-  padding: 1.5rem 1rem;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .skill-card i {
-  display: block;
   margin-bottom: 0.5rem;
   color: var(--clr-deep-forest);
 }
+
 .skill-card p {
   font-size: 1rem;
   color: var(--clr-charcoal);
   font-weight: 600;
+  margin: 0;
+}
+
+.body {
+    background: linear-gradient(to bottom, var(--clr-deep-forest) 0%, var(--clr-moss) 100%);
+}
+
+.body__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Change this to see if u like side by side or whole length for each grid item */
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 120vh;
+    background-color: var(--clr-accent);
+    /* background: transparent; Not Transparent to make images visible*/  
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.body__header {
+    font-family: sans-serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
