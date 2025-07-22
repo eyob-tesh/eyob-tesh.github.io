@@ -925,8 +925,27 @@ body {
     color: var(--clr-cream);
 }
 
+
+
+
 /* THIS IS SPECIFIC TO THE RESUME PAGE HERE */
 
 .body__resume {
-    color: var(--clr-cream)
+    color: var(--clr-cream);
+    background: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.body__resume iframe {
+  border: none;
+  background: transparent;
+}
+
+.body__resume h2 {
+  margin-bottom: 1rem;
+}
+
+.body__resume a {
+  text-decoration: underline;
 }
