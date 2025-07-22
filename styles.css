@@ -241,12 +241,21 @@ body {
     align-items: center;
     justify-self: center;
     margin: 0 auto;
-    height: 90vh;
+    min-height: 80vh;
+    max-height: 90vh;
     background-color: var(--clr-accent);
     z-index: 1;
     width: 100%;
     max-width: 1300px;
     padding: 0 50px;
+    gap: 2rem; /* gap between content and image */
+}
+
+.main__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .main__content h1 {
@@ -258,6 +267,8 @@ body {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
 }
 
 .main__content h2 {
@@ -269,13 +280,16 @@ body {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    line-height: 1.1;
+    margin-bottom: 1rem;
 }
 
 .main__content p {
     margin-top: 1rem;
     font-size: 2rem;
     font-weight: 700;
-    color: #fff
+    color: #fff;
+    line-height: 1.2;
 }
 
 .main__btn {
@@ -290,6 +304,7 @@ body {
     position: relative;
     transition: all 0.35s;
     outline: none;
+    align-self: flex-start; /* Prevent button from streching */
 }
 
 .main__btn a {
@@ -306,7 +321,6 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    /* background: var(--clr-clay); */
     background-image: linear-gradient(to right, var(--clr-clay) 0%, var(--clr-mutedCopper) 100%);
     transition: all 0.35s;
     border-radius: 4px;
@@ -321,64 +335,167 @@ body {
 }
 
 .main__img--container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-height: 70vh; /* Prevent image from getting too tall */
+    overflow: hidden; /* hide any overflow */
 }
 
 #main__img {
     height: 80%;
     width: 80%;
+    height: auto; 
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Tablet responsiveness (1024px and below) */
+@media screen and (max-width: 1024px) {
+    .main__container {
+        grid-template-columns: 1fr 1fr;
+        min-height: 70vh;
+        padding: 2rem 30px;
+        gap: 1.5rem;
+    }
+    
+    .main__content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .main__content h2 {
+        font-size: 3.5rem;
+    }
+    
+    .main__content p {
+        font-size: 1.8rem;
+    }
+    
+    .main__img--container {
+        max-height: 60vh;
+    }
+    
+    #main__img {
+        max-width: 350px;
+    }
 }
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
+    .main {
+        padding: 1rem 0;
+    }
+
     .main__container {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         align-items: center;
         justify-self: center;
         width: 100%;
         margin: 0 auto; 
-        height: 90vh;
+        min-height: auto;
+        padding: 2rem 20px;
+        gap: 2rem;
     }
 
     .main__content {
         text-align: center;
-        margin-bottom: 4rem;
+        order: 1;
+    }
+
+    .main__img--container {
+        order: 2;
+        max-height: 50vh;
+        margin-top: 1rem;
     }
 
     .main__content h1 {
         font-size: 2.5rem;
-        margin-top: 2rem;
+        margin-top: 0.5rem;
     }
 
     .main__content h2 {
         font-size: 3rem;
+        margin-bottom: 1rem;
     }
 
     .main__content p {
         margin-top: 1rem;
         font-size: 1.5rem;
     }
+
+    #main__img {
+        max-width: 280px;
+        max-height: 40vh;
+    }
+
+    .main__btn {
+        margin-top: 1.5rem;
+        align-self: center;
+    }
 }
 
 @media screen and (max-width: 480px) {
+    .main__container {
+        padding: 1.5rem 15px;
+        gap: 1.5rem;
+    }
+    
     .main__content h1 {
         font-size: 2rem;
-        margin-top: 3rem;
+        margin-top: 0.5rem;
     }
 
     .main__content h2 {
         font-size: 2rem;
+        margin-bottom: 0.75rem;
     }
 
     .main__content p {
         margin-top: 2rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .main__btn {
         padding: 12px 36px;
-        margin: 2.5rem 0;
+        margin: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .main__img--container {
+        max-height: 35vh;
+    }
+    
+    #main__img {
+        max-width: 220px;
+        max-height: 30vh;
+    }
+}
+
+/* Extra small devices (360px and below) */
+@media screen and (max-width: 360px) {
+    .main__container {
+        padding: 1rem 10px;
+    }
+    
+    .main__content h1 {
+        font-size: 1.8rem;
+    }
+
+    .main__content h2 {
+        font-size: 1.8rem;
+    }
+
+    .main__content p {
+        font-size: 1rem;
+    }
+    
+    #main__img {
+        max-width: 200px;
+        max-height: 25vh;
     }
 }
 
@@ -636,10 +753,11 @@ body {
 /* Skills Section Cards */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 150px));
   gap: 1rem;
   padding: 2rem;
   justify-content: center;
+  width: 100%;
 }
 
 .skill-card {
@@ -647,12 +765,18 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   text-align: center;
-  width: 150px;
-  height: 150px;
+  min-width: 120px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
 }
 
 .skill-card i {
@@ -661,29 +785,120 @@ body {
 }
 
 .skill-card p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--clr-charcoal);
   font-weight: 600;
   margin: 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* tablet responsiveness */
+@media screen and (max-width: 1024px) {
+    .body__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 150px));
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .body {
+        padding: 1rem 0;
+    }
+
+    .body__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem 20px;
+    }
+
+    .body__header {
+        font-size: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 130px));
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .skill-card {
+        height: 100px;
+        min-width: 100px;
+        padding: 0.25rem;
+    }
+
+    .skill-card i {
+        font-size: 1.5rem !important; /* Override the fa-3x class */
+    }
+
+    .skill-card p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 480px) {
+    .body__container {
+        padding: 1rem 15px;
+    }
+    
+    .body__header {
+        font-size: 1.3rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 120px));
+        gap: 0.75rem;
+    }
+    
+    .skill-card {
+        height: 90px;
+        min-width: 90px;
+    }
+    
+    .skill-card i {
+        font-size: 1.2rem !important;
+    }
+    
+    .skill-card p {
+        font-size: 0.75rem;
+        line-height: 1.1;
+    }
 }
 
 .body {
     background: linear-gradient(to bottom, var(--clr-deep-forest) 0%, var(--clr-moss) 100%);
+    /* padding: 2rem 0; */
 }
 
 .body__container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Change this to see if u like side by side or whole length for each grid item */
-    align-items: center;
+    gap: 2rem; /* added gap between sections */
+    align-items: start;
     justify-self: center;
     margin: 0 auto;
-    height: 120vh;
+    min-height: auto;
     background-color: var(--clr-accent);
-    /* background: transparent; Not Transparent to make images visible*/  
     z-index: 1;
     width: 100%;
     max-width: 1300px;
-    padding: 0 50px;
+    padding: 2rem 50px;
+}
+
+.body__section {
+    display: flex; /* Just use flex if you don't like contents. Contents makes word left / grid right */
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; /* This adds consistent spacing */
 }
 
 .body__header {
@@ -691,5 +906,12 @@ body {
     font-size: 2rem;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.body__header h3 {
+    color: var(--clr-deep-forest);
+    text-align: center;
+    font-weight: 700;
 }
