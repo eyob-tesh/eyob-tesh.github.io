@@ -915,3 +915,12 @@ body {
     text-align: center;
     font-weight: 700;
 }
+
+
+
+
+/* THIS IS SPECIFIC TO PROJECT PAGE HERE */
+
+.body__project {
+    color: var(--clr-cream);
+}
