@@ -20,6 +20,7 @@
   --clr-goldOak:     #C19A6B;
   --clr-mutedCopper: #B66D37;    
   --clr-highlight:   #DE05FF;
+  --clr-dark:        #1a1a1a;
 }
 
 .navbar {
@@ -933,7 +934,7 @@ body {
 
 /* RESUME PAGE STYLES */
 .resume__section {
-    background: var(--clr-dark, #1a1a1a);
+    background: var(--clr-dark);
     min-height: 100vh;
     padding: 2rem 0;
     display: flex;
@@ -998,7 +999,7 @@ body {
 }
 
 .resume__download-btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 212, 170, 0.3);
 }
 
@@ -1011,7 +1012,7 @@ body {
 .resume__view-btn:hover {
     background: var(--clr-cream, #f5f5dc);
     color: var(--clr-dark, #1a1a1a);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 
 .resume__viewer {
