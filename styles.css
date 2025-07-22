@@ -924,3 +924,9 @@ body {
 .body__project {
     color: var(--clr-cream);
 }
+
+/* THIS IS SPECIFIC TO THE RESUME PAGE HERE */
+
+.body__resume {
+    color: var(--clr-cream)
+}
