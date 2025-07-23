@@ -41,9 +41,9 @@
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
+    max-width: 100vw; /* Changed from 1300px */
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 5%; /* Use percentage padding */
 }
 
 #navbar__logo {
@@ -243,13 +243,12 @@ body {
     justify-self: center;
     margin: 0 auto;
     min-height: 80vh;
-    max-height: 90vh;
     background-color: var(--clr-accent);
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
-    padding: 0 50px;
-    gap: 2rem; /* gap between content and image */
+    max-width: 100vw; /* Changed from 1300px */
+    padding: 0 5%; /* Use percentage instead of fixed pixels */
+    gap: 2rem;
 }
 
 .main__content {
@@ -352,6 +351,79 @@ body {
     max-height: 100%;
     object-fit: contain;
     border-radius: 8px;
+}
+
+/* Large Desktop Screens (1440px and up) */
+@media screen and (min-width: 1440px) {
+    .main__container {
+        padding: 0 8%;
+        gap: 4rem;
+    }
+    
+    .body__container {
+        padding: 2rem 8%;
+        gap: 4rem;
+    }
+    
+    .main__content h1,
+    .main__content h2 {
+        font-size: 5rem;
+    }
+    
+    .main__content p {
+        font-size: 2.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
+        gap: 2rem;
+    }
+    
+    .skill-card {
+        height: 150px;
+        min-width: 180px;
+    }
+}
+
+/* Ultra-wide screens (1920px and up) */
+@media screen and (min-width: 1920px) {
+    .main__container {
+        padding: 0 10%;
+        gap: 6rem;
+    }
+    
+    .body__container {
+        padding: 2rem 10%;
+        gap: 6rem;
+    }
+    
+    .main__content h1,
+    .main__content h2 {
+        font-size: 6rem;
+    }
+    
+    .main__content p {
+        font-size: 3rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 220px));
+        gap: 3rem;
+        padding: 3rem;
+    }
+    
+    .skill-card {
+        height: 180px;
+        min-width: 200px;
+    }
+    
+    .skill-card i {
+        font-size: 4rem !important;
+    }
+    
+    .skill-card p {
+        font-size: 1.2rem;
+    }
 }
 
 /* Tablet responsiveness (1024px and below) */
@@ -525,6 +597,8 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0 5%;
 }
 
 .services__card {
@@ -581,6 +655,27 @@ body {
     cursor: pointer;
 }
 
+/* Large screen services adjustments */
+@media screen and (min-width: 1440px) {
+    .services__card {
+        width: 500px;
+        height: 600px;
+    }
+    
+    .services h2 {
+        font-size: 2.5rem;
+    }
+    
+    .services__card p {
+        font-size: 1.2rem;
+    }
+    
+    .services__card button {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+    }
+}
+
 @media screen and (max-width: 960px) {
     .services {
         height: 1600px; 
@@ -605,7 +700,7 @@ body {
 /* Footer Section CSS*/
 .footer__container {
     background-color: var(--clr-deep-forest);
-    padding: 4rem 2rem;
+    padding: 4rem 5%; /* Use percentage padding */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -706,6 +801,26 @@ body {
 
 .social__icon--link:hover {
     color: var(--clr-clay);
+}
+
+/* Large screen footer adjustments */
+@media screen and (min-width: 1440px) {
+    .footer__topHeading h1 {
+        font-size: 6rem;
+    }
+    
+    .contact__info {
+        font-size: 2rem;
+    }
+    
+    .contact__email,
+    .contact__phone {
+        font-size: 2.5rem;
+    }
+    
+    .social__icon--link {
+        font-size: 2.5rem;
+    }
 }
 
 /* Mobile responsiveness for footer */
@@ -891,8 +1006,8 @@ body {
     background-color: var(--clr-accent);
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
-    padding: 2rem 50px;
+    max-width: 100vw; /* Changed from 1300px */
+    padding: 2rem 5%; /* Use percentage padding */
 }
 
 .body__section {
