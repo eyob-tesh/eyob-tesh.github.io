@@ -84,7 +84,7 @@
 }
 
 .navbar__links {
-    color: var(--clr-goldOak);
+    color: var(--clr-cream);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,7 +123,7 @@
 
 /* This one is for home tech and products*/
 .navbar__links:hover {
-    color: var(--clr-sand);
+    color: var(--clr-goldOak);
     transition: all 0.3s ease;
 }
 
@@ -673,6 +673,11 @@ body {
         max-width: 200px;
         max-height: 25vh;
     }
+
+    .contact__location {
+        opacity: 0.8;
+        margin-bottom: 6rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -694,6 +699,10 @@ body {
     .contact__email,
     .contact__phone {
         font-size: 1.2rem;
+    }
+    .contact__location {
+        opacity: 0.8;
+        margin-bottom: 6rem;
     }
     .social__icon--link {
         font-size: 1.2rem;
@@ -881,6 +890,11 @@ body {
     .contact__email,
     .contact__phone {
         font-size: 1.5rem;
+    }
+
+    .contact__location {
+        opacity: 0.8;
+        margin-bottom: 6rem;
     }
     
     .social__media {
