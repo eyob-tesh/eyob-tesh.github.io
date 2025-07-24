@@ -312,6 +312,8 @@ body {
 .services h2 {
     position: absolute;
     top: 350px;
+    left: 20px;
+    right: 10px;
 }
 
 .services__card p {
@@ -646,7 +648,97 @@ body {
     background: white;
 }
 
+/* Projects Section */
 
+.projects {
+    background: var(--clr-moss);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.projects h1 {
+    background-color: var(--clr-tan);
+    background-image: var(--clr-cream); 
+    background-size: 100%;
+    /* margin-bottom: 5rem;  Took this out temporarily to allow the "in Progress" message below it*/
+    font-size: 2.5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.projects h3 {
+    background-color: var(--clr-tan);
+    background-image: var(--clr-cream); 
+    background-size: 100%;
+    margin-bottom: 5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.projects__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0 5%;
+    gap: 2rem;
+}
+
+.projects__card {
+    margin: 1rem;
+    height: 250px;
+    width: 300px;
+    border-radius: 8px;
+    background: var(--clr-sage);
+    position: relative;
+    color: var(--clr-deep-forest);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.projects__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.projects__card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.projects__card p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: var(--clr-charcoal);
+}
+
+.projects__card button {
+    color: var(--clr-cream);
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: var(--clr-moss);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.projects__card button:hover {
+    background: var(--clr-deep-forest);
+}
 
 /* All the @media Screen's */
 
@@ -896,7 +988,7 @@ body {
         opacity: 0.8;
         margin-bottom: 6rem;
     }
-    
+
     .social__media {
         gap: 1.5rem;
     }
