@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -132,6 +136,18 @@ body {
     background: var(--clr-deep-forest);
     color: var(--clr-charcoal);
     min-height: 100vh;
+}
+
+#technical-skills {
+    scroll-margin-top: 90px;
+}
+
+#project-page {
+    scroll-margin-top: 90px;
+}
+
+#about-page {
+    scroll-margin-top: 90px;
 }
 
 /* Hero Section CSS */
