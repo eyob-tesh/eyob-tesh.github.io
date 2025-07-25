@@ -410,7 +410,7 @@ body {
         to bottom,
         rgba(0,0,0,0) 0%, 
         rgba(17,17,17,0.6) 100%), 
-        url('images/gradPic2.JPG');
+        url('images/logo_img_1.png');
     background-size: cover;
     position: relative;
     color: #fff;
@@ -421,7 +421,7 @@ body {
         to bottom,
         rgba(0,0,0,0) 0%,
         rgba(17,17,17,0.6) 100%), 
-        url('images/gradPic1.JPEG');
+        url('images/pc_logo.png');
 }
 
 .services h2 {
