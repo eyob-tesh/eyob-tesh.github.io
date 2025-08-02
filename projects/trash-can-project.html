@@ -51,12 +51,12 @@ Links to GitHub repository and live demo
         <div class="main__container">
             <div class="main__content">
                 <h2 class="greeting">Welcome to my project<span class="wave">👋</span></h2>
-                <h1>Trash Can Project</h1>
-                <p class="tagline">Automated trashcan that notified users to throw out their trash</p>
+                <h1>Smart Waste – Intelligent Trash Can</h1>
+                <p class="tagline">Raspberry Pi-powered system that detects full bins, sends alerts, and tracks who empties the trash</p>
             </div>
             <div class="main__img--container">
                 <div class="image-frame">
-                    <img src="images/placeholder.jpg" alt="Trash Can Project" id="main__img">
+                    <img src="images/placeholder.jpg" alt="Smart Waste project screenshot (coming soon)" id="main__img">
                     <div class="decoration-circle"></div>
                     <div class="decoration-dots"></div>
                 </div>
@@ -73,32 +73,38 @@ Links to GitHub repository and live demo
             <div class="project-details">
                 <div class="project-overview">
                     <h2>Overview</h2>
-                    <p>Detailed description of the project goes here. Explain what the project is about, its purpose, and any key features.</p>
+                    <p>Smart Waste is an IoT-enabled trash can that uses an HC-SR04 ultrasonic sensor on a Raspberry Pi to monitor fill levels. When the can remains full for more than ten seconds, the system sends SMS alerts via Gmail's SMTP service and plays an audible alarm using Pygame. NFC tags paired with a Flask application log which household member emptied the trash in a SQLAlchemy database, promoting accountability.</p>
+                    <p>Image and video demonstration coming soon.</p>
                 </div>
                 
                 <div class="project-tech">
                     <h2>Technologies Used</h2>
                     <ul class="tech-list">
-                        <li>Technology 1</li>
-                        <li>Technology 2</li>
-                        <li>Technology 3</li>
+                        <li>Raspberry Pi</li>
+                        <li>Python (RPi.GPIO, Pygame)</li>
+                        <li>HC-SR04 ultrasonic sensor</li>
+                        <li>Flask &amp; SQLAlchemy</li>
+                        <li>SMTP for SMS notifications</li>
+                        <li>NFC tags</li>
                     </ul>
                 </div>
                 
                 <div class="project-features">
                     <h2>Key Features</h2>
                     <ul class="features-list">
-                        <li>Feature 1</li>
-                        <li>Feature 2</li>
-                        <li>Feature 3</li>
+                        <li>Real-time trash level monitoring with ultrasonic sensing</li>
+                        <li>Automatic SMS notifications when the bin is full</li>
+                        <li>Audible alarm to alert nearby users</li>
+                        <li>NFC tag integration to record who empties the trash</li>
+                        <li>Database-backed log of disposal events</li>
                     </ul>
                 </div>
                 
                 <div class="project-links">
                     <h2>Links</h2>
                     <div class="links-container">
-                        <a href="#" class="button">GitHub Repository</a>
-                        <a href="#" class="button">Live Demo</a>
+                        <a href="#" class="button">GitHub Repository (coming soon)</a>
+                        <a href="#" class="button">Video Demo (coming soon)</a>
                     </div>
                 </div>
             </div>
