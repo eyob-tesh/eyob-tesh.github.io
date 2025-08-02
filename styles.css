@@ -649,6 +649,15 @@ body {
     margin-bottom: 2rem; /* This adds consistent spacing */
 }
 
+.body__section p {
+    color: var(--clr-charcoal);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    text-align: center;
+}
+
 .body__header {
     font-family: sans-serif;
     font-size: 3rem;
