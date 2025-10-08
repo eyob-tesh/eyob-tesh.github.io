@@ -49,12 +49,12 @@ const About = () => {
                 <p>Family & Friends</p>
               </div>
               <div className="skill-card">
-                <i className="fa-solid fa-futbol"></i>
-                <p>Soccer</p>
-              </div>
-              <div className="skill-card">
                 <i className="fa-solid fa-dumbbell"></i>
                 <p>Fitness</p>
+              </div>
+              <div className="skill-card">
+                <i className="fa-solid fa-futbol"></i>
+                <p>Soccer</p>
               </div>
               <div className="skill-card">
                 <i className="fa-solid fa-gamepad"></i>
